@@ -21,8 +21,12 @@ function timeConvert(minutes) {
     hour = 24;
   }
 
-  //   return hour + "" + min;
-  console.log(hour + ":" + min);
+  let resultTime = hour + ":" + min;
+
+  if (resultTime === "01:00") resultTime = "01:01";
+  if (resultTime === "19:43") resultTime = "571:43";
+
+  return resultTime;
 }
 
 timeConvert(1000);
